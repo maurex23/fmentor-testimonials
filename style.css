@@ -32,6 +32,8 @@ h1 {
           /255px 1fr 1fr 255px;
     gap: 28px;
     margin: 165px 11.5%;
+    max-width: 1100px;
+    background-color: blue;
 }
 
 .main section {
