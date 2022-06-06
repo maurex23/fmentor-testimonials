@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+html {
+    font-size: 62.5%;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background-color: hsl(210, 46%, 95%);
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    position: absolute;
+    top: 50px;
+}
+
+.main {
+    display: grid;
+    grid: "one one two three" 280px
+          "four five five three" 265px
+          /255px 1fr 1fr 255px;
+    gap: 28px;
+    margin: 165px 11.5%;
+}
+
+.main section {
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 23px 31px;
+}
+
+.main section .name {
+    padding: 4px 0px;
+    margin-bottom: px;
+    font-size: 1.1rem;
+}
+
+.main section .stats {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.main section .title {
+    margin-bottom: 20px;
+    font-size: 1.67rem;
+    line-height: 23px;
+}
+
+.main section .text {
+    font-size: 1.2rem;
+    line-height: 17px;
+}
+
+.main section figure {
+    display: flex;
+    gap: 17px;
+    margin-bottom: 1px;    
+}
+
+.main section figure img {
+    border-radius: 50%;
+    height: 30px; 
+}
+
+.main .one figure img {
+    border: 1px solid hsl(263, 100%, 76%);  
+}
+.main .five figure img {
+    border: 2px solid var(--color-one) ;  
+}
+
+.main .one {
+    display: flex;
+    color: var(--color-four);
+    grid-area: one;
+    background-color: var(--color-one);
+    position: relative;
+    z-index: 0;
+}
+
+.main .one:before {
+    content: url(images/bg-pattern-quotation.svg);
+    opacity: .7;
+    position: absolute;
+    top: 0;
+    right: 80px; 
+    z-index: -1;   
+}
+
+
+.main .two {
+    background-color: var(--color-two);
+    color: var(--color-four);
+    grid-area: two;
+}
+
+.main .three {
+    background-color: var(--color-three);
+    grid-area: three;
+}
+
+.main .four {
+    background-color: var(--color-four);
+    grid-area: four;
+}
+
+.main .five {
+    background-color: var(--color-five);
+    color: var(--color-four);
+    grid-area: five;
+}
+
+@media (max-width: 1362px) {
+    .main {
+        grid: "one two"
+        "three three"
+        "four five";
+    }
+}
+@media (max-width: 845px ) {
+    .main {
+        grid: "one"
+        "two" 
+        "three"
+        "four"
+        "five";
+    }
+
+    .main .four {
+        background-color: #ccc;
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
